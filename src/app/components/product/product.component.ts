@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { timer } from 'rxjs';
 import { Product, ProductVo } from 'src/app/models/Product';
 import { ProductsService } from 'src/app/services/products.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-product',
@@ -17,7 +20,10 @@ export class ProductComponent implements OnInit {
   
 
   constructor(private productService: ProductsService) {
-
+    Swal.fire({
+      title: "Welcome",
+      timer: 2000
+    })
   }
 
   async ngOnInit() {
@@ -48,7 +54,10 @@ export class ProductComponent implements OnInit {
     this.changeAddBtnState()
     this.productService.addProducts(this.productVo)
       .subscribe(res => {
-        alert('Product has been added')
+        Swal.fire({
+          title: "Product Added",
+          timer: 2000
+        })
       },
         (error: any) => {
           console.log(error)

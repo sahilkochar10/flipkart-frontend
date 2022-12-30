@@ -9,7 +9,7 @@
     align-items: center;
     margin: auto;
     background-color: var(--form);
-    border-radius: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
 }
 h3 {
@@ -32,10 +32,10 @@ tbody {
 .product__form {
     margin: auto;
     width: 600px;
-    background-color: #000000;
+    background-color: #4d4d4d;
     color: #fabb0f;
     align-items: center;
-    border-radius: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 20px;
 }
     .product__form div {

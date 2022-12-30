@@ -11,7 +11,7 @@
     align-items: center;
     margin: auto;
     background-color: var(--form);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
 }
 
@@ -52,11 +52,11 @@ tbody {
 
 .product__form {
     margin: auto;
-    background-color: #000000;
+    background-color: #4d4d4d;
     color: #fabb0f;
     align-items: center;
-    border-radius: 25px;
     padding: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 700px;
 }
 
