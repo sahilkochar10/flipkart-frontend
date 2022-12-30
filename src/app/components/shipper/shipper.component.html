@@ -1,0 +1,21 @@
+<div class="product__body">
+
+    <h3>Shipper</h3>
+    <div class="products">
+        <table class="table ">
+            <thead>
+                <tr>
+                    <td scope="col">Shipper ID</td>
+                    <td scope="col">Phone</td>
+                    <td scope="col">Shipper Name</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let shipper of shippers">
+                    <td>{{shipper.shipperID}}</td>
+                    <td>{{shipper.phone}}</td>
+                    <td>{{shipper.shipperName}}</td>
+                </tr>
+            </tbody>
+        </table>
+            

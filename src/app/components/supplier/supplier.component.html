@@ -1,0 +1,27 @@
+
+<div class="product__body">
+
+    <h3>Supplier</h3>
+    <div class="products">
+        <table class="table ">
+            <thead>
+                <tr>
+                    <td scope="col">Supplier ID</td>
+                    <td scope="col">Address</td>
+                    <td scope="col">City</td>
+                    <td scope="col">Postal Code</td>
+                    <td scope="col">Supplier Name</td>
+                </tr>
+</thead>
+<tbody>
+                <tr *ngFor="let supplier of suppliers">
+                    <td>{{supplier.supplierID}}</td>
+                    <td>{{supplier.address}}</td>
+                    <td>{{supplier.city}}</td>
+                    <td>{{supplier.postalCode}}</td>
+                    <td>{{supplier.supplierName}}</td>
+            
+
+
+                </tr>
+            </tbody>

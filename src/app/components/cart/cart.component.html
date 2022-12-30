@@ -1,0 +1,27 @@
+
+<div class="product__body">
+
+    <h3>Cart</h3>
+    <div class="products">
+        <table class="table ">
+            <thead>
+                <tr>
+                    <td scope="col">Product</td>
+                    <td scope="col">Price</td>
+                    <td scope="col">Remove</td>
+                </tr>
+            </thead>
+                <tbody>
+                <tr *ngFor="let cart of cartList">
+                    <td>{{cart.productName}}</td>
+                    <td>{{cart.price}}</td>
+                    <td><button (click)="removeCartProduct(cart)"><img src="../assets/deletebtn.png" width="30" height="30"></button></td>
+                        
+                </tr>
+                <tr>
+                    
+                </tr>
+            </tbody>
+           
+        </table>
+        <button (click)="buynow()">Buy Now</button>
