@@ -16,6 +16,38 @@
                     <td>{{shipper.phone}}</td>
                     <td>{{shipper.shipperName}}</td>
                 </tr>
-            </tbody>
-        </table>
+
+
+             <tr style="text-align: center;">
+                    <td colspan="7"><button type="button" class="btn add__products" (click)="changeAddBtnState()">Add Shipper</button> </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
             
+        <div class="form" *ngIf="addBtnState">
+            <h2>Add Shipper</h2>
+            <div class="product__form">
+              <form (ngSubmit)="addShippers()">
+                <div>
+                  <label for="shipper__id">Shipper ID</label>
+                  <input type="number" id="shipper__name" placeholder="Enter Shipper ID" [(ngModel)]="shipperVo.shipperID"
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+                <div>
+                  <label for="shipper__name">Shipper Name</label>
+                  <input type="text" id="shipper__name" placeholder="Enter Shipper Name" [(ngModel)]="shipperVo.shipperName"
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+                <div>
+                  <label for="shipper__phone">Phone no.</label>
+                  <input type="number" id="shipper__phone" placeholder="Ente Phone number" [(ngModel)]="shipperVo.phone"
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form__button">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer, CustomerVo} from 'src/app/models/Customer';
 import {CustomerService} from 'src/app/services/customer.service'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-customer',
@@ -35,7 +36,10 @@ export class CustomerComponent implements OnInit {
     this.changeAddBtnState()
     this.customerService.addProducts(this.customerVo)
       .subscribe(res => {
-        alert('Customer has been added')
+        Swal.fire({
+          title: "Customer Added",
+          timer: 1000
+        })
       },
         (error: any) => {
           console.log(error)
@@ -46,4 +50,4 @@ export class CustomerComponent implements OnInit {
   changeAddBtnState() {
     this.addBtnState = !this.addBtnState
   }
-}
+  }

@@ -10,12 +10,19 @@ export class ProductsService {
   private _base = 'http://localhost:9374/api/v1/products'
   private _productListModified = new Subject<void>();
   cartList : Product[] = []
-  
+  products: Product[]=[]
+  findByID(id: number): Observable<Product>{
+    return this.httpClient.get<Product>(this._base+'/'+id)
+
+  }
+
   constructor(
     private httpClient: HttpClient
   ) {
     this.cartList=JSON.parse(localStorage.getItem('cartList'))
-  }
+    this.getProducts().subscribe(p3=> {
+      this.products= p3
+    })  }
   
 
   get productListModified() {
@@ -24,6 +31,7 @@ export class ProductsService {
 
   getProducts(): Observable<Product[]> {
     console.log("on getProducts")
+
     return this.httpClient.get<Product[]>(this._base)
   }
 

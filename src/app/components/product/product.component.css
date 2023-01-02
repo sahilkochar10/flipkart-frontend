@@ -67,7 +67,7 @@ tbody {
 }
 
 .product__form input {
-    border-radius: 25px;
+    border-radius: 10px;
     border: 0;
 }
 
@@ -84,9 +84,9 @@ tbody {
 }
 
 .edit__form{
-    margin-top: auto;
-    width: 450px;
-    float: right;
+    margin-top: 350px;
+    width: 1310px;
+    float:none;
     position: absolute;
     top: 200px;
     right: 20px;
@@ -100,10 +100,11 @@ tbody {
 .edit__form1{
     margin: auto;
     width: 400px;
-    background-color: hsl(0, 0%, 0%);
-    color: white;
+    background-color: #4d4d4d;
+    color: #fabb0f;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     align-items: center;
-    border-radius: 25px;
+
     padding: 20px;
 }
 

@@ -20,10 +20,10 @@ export class ProductComponent implements OnInit {
   
 
   constructor(private productService: ProductsService) {
-    Swal.fire({
-      title: "Welcome",
-      timer: 2000
-    })
+    // Swal.fire({
+    //   title: "Welcome",
+    //   timer: 2000
+    // })
   }
 
   async ngOnInit() {
@@ -56,7 +56,7 @@ export class ProductComponent implements OnInit {
       .subscribe(res => {
         Swal.fire({
           title: "Product Added",
-          timer: 2000
+          timer: 1500
         })
       },
         (error: any) => {
@@ -85,16 +85,21 @@ export class ProductComponent implements OnInit {
   deleteProduct(id) {
     this.productService.deleteProduct(id)
       .subscribe(res => {
-        alert('Product has been deleted')
-      })
-  }
+        Swal.fire({
+          title: "Product Deleted",
+          timer: 1500
+        })
+  })}
 
   editProduct() {
     console.log(this.productVo)
     this.changeEditBtnState()
     this.productService.editProduct(this.productVo)
     .subscribe(res => {
-      alert('Product Modified')
+      Swal.fire({
+        title: "Product Edited",
+        timer: 1500
+      })
     })
     this.productVo = new ProductVo()
   }
