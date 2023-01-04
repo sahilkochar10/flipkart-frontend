@@ -1,0 +1,38 @@
+<div class="product__body">
+
+    <h3>Customer</h3>
+    <div class="products">
+        <table class="table ">
+            <thead>
+                <tr>
+                    <td scope="col">Customer ID</td>
+                    <td scope="col">Postal Code</td>
+                    <td scope="col">Customer Name</td> 
+                    <td scope="col">Address</td> 
+                    <td scope="col">City</td> 
+                    <td scope="col">Country</td> 
+                    
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let customer of customers">
+                    <td>{{customer.customerID}}</td>
+                    <td>{{customer.postalCode}}</td>
+                    <td>{{customer.customerName}}</td>
+                    <td>{{customer.address}}</td>
+                    <td>{{customer.city}}</td>
+                    <td>{{customer.country}}</td>
+                    
+               </tr>
+                </tbody>
+              </table>
+
+        </div>
+
+
+        
+
+      </div>
+
+      
+          

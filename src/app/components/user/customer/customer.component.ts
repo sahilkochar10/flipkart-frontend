@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
   templateUrl: './customer.component.html',
   styleUrls: ['./customer.component.css']
 })
-export class CustomerComponent implements OnInit {
+export class UserCustomerComponent implements OnInit {
   products: CustomerVo[];
   addBtnState: boolean = false;
   editBtnState: boolean = false;
@@ -20,26 +20,29 @@ export class CustomerComponent implements OnInit {
   constructor(private customerService: CustomerService) { }
 
   async ngOnInit() { 
-    this.getCustomers()
-    this.customerService.customerListModified.subscribe(res => {
-      this.getCustomers()
-    })  
+    // this.getCustomers()
+    // this.customerService.customerListModified.subscribe(res => {
+    //   this.getCustomers()
+    // })  
   }
-  getCustomers(): any{
-    this.customerService.getCustomers().subscribe(res =>{
-      this.customers=res
-    })
-  }
+  // getCustomers(): any{
+  //   this.customerService.getCustomers().subscribe(res =>{
+  //     this.customers=res
+  //   })
+  // }
 
   addCustomers() {
+    this.customers=[]
     console.log(this.customerVo)
     this.changeAddBtnState()
     this.customerService.addProducts(this.customerVo)
       .subscribe(res => {
+        this.customers.push(this.customerVo)
         Swal.fire({
           title: "Customer Added",
           timer: 1000
         })
+        this.customerVo=new CustomerVo()
       },
         (error: any) => {
           console.log(error)

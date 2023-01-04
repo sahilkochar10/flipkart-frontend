@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements OnInit {
+export class AdminProductComponent implements OnInit {
   products: ProductVo[];
   addBtnState: boolean = false;
   editBtnState: boolean = false;

@@ -4,17 +4,22 @@
     <img src="../assets/flipkartlogo.png" width="40" height="40" />
   </div>
   <div>
-    <h2><a class="header__home" routerLink="">Flipkart</a></h2>
+    <h2><a class="header__home" routerLink="/">Flipkart</a></h2>
   </div>
   </div>
   <div class="header__right">
-    <div>
+
+    <div *ngIf="visible">
+      <button (click)="assignComponent('admin')">Admin</button>
+      <button (click)="assignComponent('user')">User</button>
+    </div>
+    <ng-container *ngComponentOutlet="clickedComponent"></ng-container>
+    <!-- <div>
       <a routerLink="/shipper"> <img src="../assets/shipperbtn.png" title="Shipper" width="36" height="36" alt="Shipper"></a>
     </div>
     <div>
       <a routerLink="/supplier"> <img src="../assets/supplierbtn.png" title="Supplier" width="36" height="36" alt="Supplier"></a>
     </div>
-    
     <div>
       <a routerLink="/customer"><img src="../assets/customerbtn.png" title="Customer" width="36" height="36" alt="Customer"></a>
     </div>
@@ -23,8 +28,8 @@
     </div>
     <div>
       <a routerLink="/order"><img src="../assets/orderbtn.png" title="Order" width="36" height="36" alt="Customer"></a>
-      
-    </div>
+    </div> -->
+    
   </div>
 </header>
 

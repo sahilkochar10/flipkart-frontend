@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/solversrum-frontend'),
+      dir: require('path').join(__dirname, './coverage/flipkart-frontend-frontend'),
       subdir: '.',
       reporters: [
         { type: 'html' },

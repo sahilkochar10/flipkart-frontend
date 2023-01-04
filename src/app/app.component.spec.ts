@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'solversrum-frontend'`, () => {
+  it(`should have as title 'flipkart-frontend-frontend'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('solversrum-frontend');
+    expect(app.title).toEqual('flipkart-frontend-frontend');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('solversrum-frontend app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('flipkart-frontend-frontend app is running!');
   });
 });

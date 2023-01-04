@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "solversrum-frontend": {
+    "flipkart-frontend-frontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/solversrum-frontend",
+            "outputPath": "dist/flipkart-frontend-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "solversrum-frontend:build:production"
+              "browserTarget": "flipkart-frontend-frontend:build:production"
             },
             "development": {
-              "browserTarget": "solversrum-frontend:build:development"
+              "browserTarget": "flipkart-frontend-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "solversrum-frontend:build"
+            "browserTarget": "flipkart-frontend-frontend:build"
           }
         },
         "test": {

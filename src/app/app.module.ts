@@ -4,23 +4,32 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsService } from 'src/app/services/products.service';
-import { ProductComponent } from './components/product/product.component';
-import { CartComponent } from './components/cart/cart.component';
-import { SupplierComponent } from './components/supplier/supplier.component';
-import { ShipperComponent } from './components/shipper/shipper.component';
+import { AdminProductComponent } from './components/admin/product/product.component';
+import { UserProductComponent } from './components/user/product/product.component';
+import { CartComponent } from './components/user/cart/cart.component';
+import { SupplierComponent } from './components/admin/supplier/supplier.component';
+import { ShipperComponent } from './components/admin/shipper/shipper.component';
 import { FormsModule } from '@angular/forms';
-import { CustomerComponent } from './components/customer/customer.component';
-import {OrderComponent} from './components/order/order.component';
+import { AdminCustomerComponent } from './components/admin/customer/customer.component';
+import { UserCustomerComponent } from './components/user/customer/customer.component';
+import {OrderComponent} from './components/admin/order/order.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { UserComponent } from './components/user/user.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
+    AdminProductComponent,
+    UserProductComponent,
     CartComponent,
     SupplierComponent,
     ShipperComponent,
-    CustomerComponent,
-    OrderComponent
+    AdminCustomerComponent,
+    UserCustomerComponent,
+    OrderComponent,
+    AdminComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

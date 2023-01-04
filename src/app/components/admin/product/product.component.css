@@ -7,7 +7,7 @@
 .products {
     /* position: relative; */
     padding-top: 100px;
-    width: 900px;
+    width: 1000px;
     align-items: center;
     margin: auto;
     background-color: var(--form);
