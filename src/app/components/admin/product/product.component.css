@@ -19,6 +19,7 @@ h3 {
     text-align: center;
     margin: auto;
     padding-bottom: 20px;
+    color: var(--color4);
 }
 
 
@@ -48,6 +49,7 @@ tbody {
 .form h2 {
     padding-top: 10px;
     text-align: center;
+    color: var(--color4);
 }
 
 .product__form {
@@ -94,6 +96,7 @@ tbody {
 
 .edit__form h2{
     text-align: center;
+    color: var(--color4);
 }
 
 

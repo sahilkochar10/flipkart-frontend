@@ -50,3 +50,11 @@
 }
 
 
+.add__customers {
+   color: var(--color4); 
+    background-color: #ffdf13; 
+    border-radius: 15px;
+    border: 10;
+    padding: 10px;
+    margin-right: auto;
+}

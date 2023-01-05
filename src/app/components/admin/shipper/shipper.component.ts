@@ -75,7 +75,14 @@ export class ShipperComponent implements OnInit {
     this.shipperVo = shipper
     this.changeEditBtnState()
   }
-
+  deleteShipper(id) {
+    this.shipperService.deleteShipper(id)
+      .subscribe(res => {
+        Swal.fire({
+          title: "Shipper Deleted",
+          timer: 1500
+        })
+  })}
 
 }
 

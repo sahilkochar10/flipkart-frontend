@@ -15,7 +15,7 @@
                 <tr *ngFor="let cart of cartList">
                     <td>{{cart.productName}}</td>
                     <td>{{cart.price}}</td>
-                    <td><button (click)="removeCartProduct(cart)" background-color="grey"><img src="../assets/removebtn.png" title="Remove from Cart" width="30" height="30"></button></td>
+                    <td><button class="removebtn" (click)="removeCartProduct(cart)" background-color="grey"><img src="../assets/removebtn.png" title="Remove from Cart" width="30" height="30"></button></td>
                         
                 </tr>
                 <tr>
@@ -25,5 +25,5 @@
            
         </table>
         <h3>Total Amount {{total}}</h3>
-        <div class="form">
-        <h2><button (click)="buynow()">Buy Now</button></h2></div>
+        <div style="text-align: center;"
+        colspan="7"><button type="button" class="btn add__customers" (click)="buynow()">Place Order</button></div>

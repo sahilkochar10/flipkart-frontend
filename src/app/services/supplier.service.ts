@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable, Subject, tap } from 'rxjs';
-import { Supplier } from 'src/app/models/Supplier';
+import { Supplier, SupplierVo } from 'src/app/models/Supplier';
 
 @Injectable({
   providedIn: 'root'
@@ -23,4 +23,29 @@ export class SupplierService {
   getSuppliers(): Observable<Supplier[]> {
     console.log("on getSuppliers")
     return this.httpClient.get<Supplier[]>(this._base)
-  }}
+  }
+  addSuppliers(supplier: SupplierVo): any {
+    return this.httpClient.post(this._base, [supplier], { responseType: 'text' }).pipe(
+      tap(() => {
+        this._supplierListModified.next();
+      })
+    );
+  }
+
+  editSupplier(supplier : any){
+    supplier.supplierID=supplier.s
+    return this.httpClient.put(this._base , [supplier], {responseType: 'text'}).pipe(
+      tap(() => {
+        this._supplierListModified.next();
+      })
+    );
+  }
+  deleteSupplier(id) {
+    return this.httpClient.delete(this._base + '/' + id, { responseType: 'text' }).pipe(
+      tap(() => {
+        this._supplierListModified.next();
+      })
+    );
+  }
+
+}

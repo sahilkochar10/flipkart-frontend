@@ -2,7 +2,7 @@
 
     <h3>Customer</h3>
     <div class="products">
-        <table class="table ">
+        <!-- <table class="table ">
             <thead>
                 <tr>
                     <td scope="col">Customer ID</td>
@@ -25,16 +25,19 @@
                     
                 </tr>
                 <tr style="text-align: center;">
-                    <td colspan="7"><button type="button" class="btn add__customers" (click)="changeAddBtnState()">Add Customer</button> </td>
+                    <td colspan="7"><button type="button" class="btn add__customers" (click)="changeAddBtnState()">Register</button> </td>
                   </tr>
                 </tbody>
-              </table>
+              </table> -->
+
+              <div style="text-align: center;"
+                 colspan="7"><button type="button" class="btn add__customers" (click)="changeAddBtnState()">Register</button></div>
 
         </div>
 
 
         <div class="form" *ngIf="addBtnState">
-          <h2>Add Customer</h2>
+          <h3>Registration Form</h3>
           <div class="product__form">
             <form (ngSubmit)="addCustomers()">
               

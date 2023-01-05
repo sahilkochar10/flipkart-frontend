@@ -40,7 +40,13 @@ export class ShipperService {
       })
     );
   }
-
+  deleteShipper(id) {
+    return this.httpClient.delete(this._base + '/' + id, { responseType: 'text' }).pipe(
+      tap(() => {
+        this._shipperListModified.next();
+      })
+    );
+  }
 
 
 }

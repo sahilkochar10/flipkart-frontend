@@ -1,21 +1,23 @@
-/* .product__body {
+.product__body {
     margin: 30px;
     padding: 10px;
 }
 .products {
    
     padding-top: 100px;
-    width: 900px;
+    width: 1200px;
     align-items: center;
     margin: auto;
     background-color: var(--form);
-    border-radius: 25px;
+    padding: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
 }
 h3 {
     text-align: center;
     margin: auto;
     padding-bottom: 20px;
+    color: var(--color4);
 }
 thead>tr {
     color: var(--color2);
@@ -23,4 +25,4 @@ thead>tr {
 
 tbody {
     color: antiquewhite;
-} */
+}

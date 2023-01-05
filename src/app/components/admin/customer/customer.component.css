@@ -16,6 +16,7 @@ h3 {
     text-align: center;
     margin: auto;
     padding-bottom: 20px;
+    color: var(--color4);
 }
 thead>tr {
     color: var(--color2);

@@ -10,8 +10,9 @@
   <div class="header__right">
 
     <div *ngIf="visible">
-      <button (click)="assignComponent('admin')">Admin</button>
-      <button (click)="assignComponent('user')">User</button>
+     <!-- <a routerlink="/admin"><img src="../assets/adminbtn.png"></a> -->
+      <button class="add__customers" (click)="assignComponent('admin')">Admin</button>
+      <button class="add__customers" (click)="assignComponent('user')">User</button>
     </div>
     <ng-container *ngComponentOutlet="clickedComponent"></ng-container>
     <!-- <div>

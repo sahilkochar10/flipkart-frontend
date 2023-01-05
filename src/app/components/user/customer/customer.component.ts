@@ -39,7 +39,7 @@ export class UserCustomerComponent implements OnInit {
       .subscribe(res => {
         this.customers.push(this.customerVo)
         Swal.fire({
-          title: "Customer Added",
+          title: "You have been registered",
           timer: 1000
         })
         this.customerVo=new CustomerVo()

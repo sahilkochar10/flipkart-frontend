@@ -12,8 +12,12 @@
 
 
 .body{
-    background-color: rgb(50, 199, 204);
+    background-image: url("bgimage2.png");
+    background-size: 1400px;
+    background-repeat:repeat-y;
+
     margin:  20px;
    
 }
 /* //#FADC0F */
+/* #F8DA0C */

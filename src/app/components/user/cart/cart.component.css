@@ -4,6 +4,10 @@
 }
 
 
+.add__customers {
+    color: var(--color4);
+    background-color: var(--color1);}
+
 .products {
     /* position: relative; */
     padding-top: 100px;
@@ -19,6 +23,7 @@ h3 {
     text-align: center;
     margin: auto;
     padding-bottom: 20px;
+    color: #000;
 }
 
 
@@ -124,4 +129,10 @@ tbody {
 
 .edit__form1 .form__button{
     justify-content: center;
+}
+
+.removebtn{
+    background-color:#4d4d4d;
+    border-color:black;
+    color: #4d4d4d;
 }
