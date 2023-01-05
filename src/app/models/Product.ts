@@ -5,6 +5,7 @@ export interface Product{
     price : number
     supplierID : number
     addBtnState : boolean
+    productImage: string
 }
 
 export class ProductVo implements Product{
@@ -14,4 +15,5 @@ export class ProductVo implements Product{
     unit: number
     price: number
     supplierID: number
+    productImage: string
 }

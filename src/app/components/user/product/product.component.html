@@ -1,3 +1,4 @@
+
 <div class="product__body">
 
   <h3>Products</h3>
@@ -5,33 +6,17 @@
     <table class="table ">
       <thead>
         <tr>
-          <!-- <td scope="col">Product ID</td> -->
           <td scope="col">Product Name</td>
           <td scope="col">Price</td>
           <td scope="col">Unit</td> 
-          <!-- <td scope="col">Delete</td>
-          <td scope="col">Edit</td> -->
           <td scope="col">Cart</td>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let product of products; let i = index">
-          <!-- <td>{{product.productID}}</td> -->
           <td>{{product.productName}}</td>
           <td>&#x20b9;{{product.price}}</td>
-          <td>{{product.unit}}</td>
-          <!-- <td><button (click)="deleteProduct(product.productID)" class="product__btn"><svg
-                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill"
-                viewBox="0 0 16 16">
-                <path
-                  d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
-              </svg></button></td>
-          <td><button (click)="setEditProductId(product)" class="product__btn"><svg
-                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill"
-                viewBox="0 0 16 16">
-                <path
-                  d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
-              </svg></button></td> -->
+          <td>{{product.unit}}</td> 
           <td><button class="product__btn" (click)="addToCart(product,i)" [disabled]="checkBtnState(product.productID)" [ngClass]="product.addBtnState ? 'product__btn__clicked' : '' "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                 fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -39,13 +24,63 @@
                   d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
               </svg></button></td>
         </tr>
-        <!-- <tr style="text-align: center;">
-          <td colspan="7"><button type="button" class="btn add__products" (click)="changeAddBtnState()">Add
-              Products</button> </td> -->
-        <!-- </tr> -->
       </tbody>
     </table>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let product of products; let i = index"> 
+        
+        <img class="w-100 p-3" src={{product.productImage}}>
+      <!-- <div class="text-white " >{{product.productName}}</div>
+      <div class="text-white " >{{product.price}}</div> -->
+      <div [ngStyle]="{'flex-direction':'row'}" class="flex h-fit items-center">
+        <div class="w-4/5">
+            <h3 class="mt-1 text-white">{{product.productName}}</h3>
+            <div class="mt-1 text-lg font-medium text-white">₹{{product.price}}</div>
+        </div>
+        <button class="product__btn" (click)="addToCart(product,i)" [disabled]="checkBtnState(product.productID)" [ngClass]="product.addBtnState ? 'product__btn__clicked' : '' "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+          <path
+            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+        </svg></button>
+    </div>
+      </div>
+        
+  </div>
+  <!-- <div>
+    <div class="bg-gray-50">
+        <div class=" mx-auto max-w-2xl py-8 px-4 sm:py-8 lg:py-8 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+                <a *ngFor="let product of products; let index = index" class="group">
+                    <div
+                        class="pimg aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                        <img src={{product.productImage}} alt="Product {{product.productName}}"
+                            class="aspect-w-1 aspect-h-1 object-cover object-center group-hover:opacity-75">
+                    </div>
+                    <div>
+                        <div [ngStyle]="{'flex-direction':'row'}" class="flex h-fit items-center">
+                            <div class="w-4/5">
+                                <h3 class="mt-4 text-sm text-gray-700">{{product.productName}}</h3>
+                                <div class="mt-1 w-auto text-lg font-medium text-gray-900">₹{{product.price}}</div>
+                            </div>
+                            <img *ngIf="productInCart(product); else cartOut" (click)="removeFromCart(product)"
+                                src="../../../assets/images/remove-from-cart.svg" class="ml-auto w-8 h-8 mr-2" />
+                            <ng-template #cartOut><img (click)="addToCart(product)"
+                                    src="../../../assets/images/add-to-cart.svg" class="ml-auto w-8 h-8 mr-2" />
+                            </ng-template>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+</div> -->
   <!-- <div class="form" *ngIf="addBtnState">
     <h2>Add Product</h2>
     <div class="product__form">

@@ -53,7 +53,7 @@ export class CartComponent implements OnInit {
     let order:OrderVo={
       customerID: 21,
       date: date.toISOString().split('T')[0],
-      shipperID:10001,
+      shipperID:123,
       orderDetails: orderDetails
     }
     this.orderService.addOrders(order).subscribe(o =>{
